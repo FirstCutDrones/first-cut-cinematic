@@ -61,7 +61,7 @@ const Index = () => {
               playsInline
               className="hero-video w-full h-full object-cover"
             >
-              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" type="video/mp4" />
+              <source src="https://player.vimeo.com/external/434045526.hd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1c9a91a7c&profile_id=174" type="video/mp4" />
               <img
                 src={heroGolfAerial}
                 alt="Aerial golf course view"
