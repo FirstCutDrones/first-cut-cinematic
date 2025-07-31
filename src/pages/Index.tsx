@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Play, Camera, Users } from "lucide-react";
-import heroGolfAerial from "@/assets/hero-golf-aerial.jpg";
+import sizzlerVideo from "@/assets/sizzler-v1.mp4";
 
 const Index = () => {
   const services = [
@@ -54,9 +54,12 @@ const Index = () => {
         {/* Hero Section */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img
-              src={heroGolfAerial}
-              alt="Beautiful golf course landscape"
+            <video
+              src={sizzlerVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
               className="hero-image w-full h-full object-cover animate-fade-in"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/40" />
