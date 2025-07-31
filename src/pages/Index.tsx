@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Play, Camera, Users } from "lucide-react";
-import sizzlerVideo from "@/assets/sizzler-v1.mp4";
+import heroVideo from "@/assets/hero-video.mp4";
 
 const Index = () => {
   const services = [
@@ -55,7 +55,7 @@ const Index = () => {
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <video
-              src={sizzlerVideo}
+              src={heroVideo}
               autoPlay
               muted
               loop
