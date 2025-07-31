@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'oswald': ['Oswald', 'sans-serif'],
-				'barlow': ['Barlow Condensed', 'sans-serif'],
+				'raleway': ['Raleway', 'sans-serif'],
+				'lato': ['Lato', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
