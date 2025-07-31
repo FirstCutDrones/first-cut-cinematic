@@ -97,10 +97,26 @@
 }
 
 @layer components {
-  /* Hero Video Container */
-  .hero-video {
+  /* Hero Image Container */
+  .hero-image {
     @apply absolute inset-0 w-full h-full object-cover;
-    filter: brightness(0.3) contrast(1.1);
+    filter: brightness(0.7) contrast(1.1);
+    animation: fadeInFromBlack 2s ease-out forwards;
+  }
+  
+  @keyframes fadeInFromBlack {
+    0% {
+      opacity: 0;
+      filter: brightness(0) contrast(1.1);
+    }
+    50% {
+      opacity: 0.5;
+      filter: brightness(0.3) contrast(1.1);
+    }
+    100% {
+      opacity: 1;
+      filter: brightness(0.7) contrast(1.1);
+    }
   }
   
   /* Cinematic Button Styles */
