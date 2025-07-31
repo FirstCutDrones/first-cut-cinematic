@@ -101,7 +101,7 @@
   /* Hero Image Container */
   .hero-image {
     @apply absolute inset-0 w-full h-full object-cover;
-    filter: brightness(0.7) contrast(1.1);
+    filter: brightness(0.9) contrast(1.1);
     animation: fadeInFromBlack 2s ease-out forwards;
   }
   
@@ -112,11 +112,11 @@
     }
     50% {
       opacity: 0.5;
-      filter: brightness(0.3) contrast(1.1);
+      filter: brightness(0.4) contrast(1.1);
     }
     100% {
       opacity: 1;
-      filter: brightness(0.7) contrast(1.1);
+      filter: brightness(0.9) contrast(1.1);
     }
   }
   
