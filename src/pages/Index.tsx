@@ -54,11 +54,20 @@ const Index = () => {
         {/* Hero Section */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img
-              src={heroGolfAerial}
-              alt="Aerial golf course view"
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
               className="hero-video w-full h-full object-cover"
-            />
+            >
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" type="video/mp4" />
+              <img
+                src={heroGolfAerial}
+                alt="Aerial golf course view"
+                className="w-full h-full object-cover"
+              />
+            </video>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/40" />
           </div>
           
