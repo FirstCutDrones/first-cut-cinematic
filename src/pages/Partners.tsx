@@ -7,24 +7,24 @@ import { TrendingUp, Users, Camera, Award } from "lucide-react";
 const Partners = () => {
   const benefits = [
     {
+      icon: <Users className="h-8 w-8" />,
+      title: "Expand Membership Reach",
+      description: "Attract new members with stunning aerial showcases that highlight your course's premium amenities and exclusive features."
+    },
+    {
+      icon: <Award className="h-8 w-8" />,
+      title: "Tournament Coverage Excellence", 
+      description: "Professional event documentation that enhances your tournament reputation and attracts future prestigious golf events."
+    },
+    {
       icon: <TrendingUp className="h-8 w-8" />,
       title: "Increased Marketing Reach",
       description: "Professional aerial content that showcases your course's unique features and drives social media engagement."
     },
     {
-      icon: <Users className="h-8 w-8" />,
-      title: "Higher Tee Time Conversions",
-      description: "Cinematic course previews that convert potential visitors into bookings through compelling visual storytelling."
-    },
-    {
       icon: <Camera className="h-8 w-8" />,
-      title: "Volume Discounts",
-      description: "Significant savings on multiple services including seasonal packages and ongoing content creation."
-    },
-    {
-      icon: <Award className="h-8 w-8" />,
-      title: "Licensing Rights",
-      description: "Full commercial usage rights for all content across your marketing channels and promotional materials."
+      title: "Volume Discounts & Licensing",
+      description: "Significant savings on multiple services with full commercial usage rights across all your marketing channels."
     }
   ];
 
