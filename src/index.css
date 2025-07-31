@@ -155,11 +155,12 @@
   
   /* Service Card Image Effects */
   .service-image {
-    @apply transition-all duration-500 brightness-50;
+    @apply transition-all duration-500 brightness-75;
   }
   
-  .service-image:hover {
-    @apply brightness-100 scale-110;
+  .service-image:hover,
+  .group:hover .service-image {
+    @apply brightness-110 scale-110;
   }
   
   /* Text Glow Effect */
