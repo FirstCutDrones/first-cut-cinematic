@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Play, Camera, Users } from "lucide-react";
-import heroVideo from "@/assets/hero-video.mp4";
+import heroVideo from "@/assets/hero-video-new.mp4";
 
 const Index = () => {
   const services = [
