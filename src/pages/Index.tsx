@@ -54,19 +54,11 @@ const Index = () => {
         {/* Hero Section */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
+            <img 
+              src="/hero-image.jpg" 
+              alt="Aerial golf course view"
               className="hero-image w-full h-full object-cover animate-fade-in"
-              onError={(e) => console.error("Video failed to load:", e)}
-              onLoadStart={() => console.log("Video loading started")}
-              onCanPlay={() => console.log("Video can play")}
-            >
-              <source src="/hero-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/40" />
           </div>
           
