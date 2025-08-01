@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Play, Camera, Users } from "lucide-react";
-import heroVideo from "@/assets/hero-video-new.mp4";
+// Using public path instead of import to avoid bundling issues
 
 const Index = () => {
   const services = [
@@ -64,7 +64,7 @@ const Index = () => {
               onLoadStart={() => console.log("Video loading started")}
               onCanPlay={() => console.log("Video can play")}
             >
-              <source src={heroVideo} type="video/mp4" />
+              <source src="/hero-video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/40" />
