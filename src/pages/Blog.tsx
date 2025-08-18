@@ -120,18 +120,18 @@ const Blog = () => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4 text-sm text-foreground-secondary">
                       <div className="flex items-center space-x-1">
-                        <User className="h-4 w-4" />
+                        <User className="h-4 w-4 text-golden" />
                         <span>{posts[0].author}</span>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <Calendar className="h-4 w-4" />
+                        <Calendar className="h-4 w-4 text-golden" />
                         <span>{posts[0].date}</span>
                       </div>
                       <span>{posts[0].readTime}</span>
                     </div>
                     <Link to="#" className="flex items-center space-x-2 text-accent hover:text-accent-hover transition-colors">
                       <span>Read More</span>
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight className="h-4 w-4 text-golden" />
                     </Link>
                   </div>
                 </div>
@@ -166,7 +166,7 @@ const Blog = () => {
                       <p className="text-foreground-secondary mb-4 text-sm line-clamp-3">{post.excerpt}</p>
                       <div className="flex items-center justify-between text-sm text-foreground-secondary">
                         <div className="flex items-center space-x-2">
-                          <Calendar className="h-4 w-4" />
+                          <Calendar className="h-4 w-4 text-golden" />
                           <span>{post.date}</span>
                         </div>
                         <span>{post.readTime}</span>

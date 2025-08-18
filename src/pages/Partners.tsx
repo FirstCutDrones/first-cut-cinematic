@@ -7,22 +7,22 @@ import { TrendingUp, Users, Camera, Award } from "lucide-react";
 const Partners = () => {
   const benefits = [
     {
-      icon: <Users className="h-8 w-8" />,
+      icon: <Users className="h-8 w-8 text-golden" />,
       title: "Expand Membership Reach",
       description: "Attract new members with stunning aerial showcases that highlight your course's premium amenities and exclusive features."
     },
     {
-      icon: <Award className="h-8 w-8" />,
+      icon: <Award className="h-8 w-8 text-golden" />,
       title: "Tournament Coverage Excellence", 
       description: "Professional event documentation that enhances your tournament reputation and attracts future prestigious golf events."
     },
     {
-      icon: <TrendingUp className="h-8 w-8" />,
+      icon: <TrendingUp className="h-8 w-8 text-golden" />,
       title: "Increased Marketing Reach",
       description: "Professional aerial content that showcases your course's unique features and drives social media engagement."
     },
     {
-      icon: <Camera className="h-8 w-8" />,
+      icon: <Camera className="h-8 w-8 text-golden" />,
       title: "Volume Discounts & Licensing",
       description: "Significant savings on multiple services with full commercial usage rights across all your marketing channels."
     }
@@ -97,7 +97,7 @@ const Partners = () => {
                 <Card key={index} className="card-hover text-center">
                   <CardContent className="p-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4">
-                      <div className="text-accent">{benefit.icon}</div>
+                      <div className="text-golden">{benefit.icon}</div>
                     </div>
                     <h3 className="text-lg font-semibold mb-3">{benefit.title}</h3>
                     <p className="text-foreground-secondary text-sm">{benefit.description}</p>

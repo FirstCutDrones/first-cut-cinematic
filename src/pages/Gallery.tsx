@@ -66,7 +66,7 @@ const Gallery = () => {
                         />
                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <Play className="h-12 w-12 text-white group-hover:scale-110 transition-transform duration-300" />
+                          <Play className="h-12 w-12 text-golden group-hover:scale-110 transition-transform duration-300" />
                         </div>
                         <div className="absolute bottom-4 left-4 right-4">
                           <h3 className="text-white font-semibold text-lg">{video.title}</h3>

@@ -26,7 +26,7 @@ const Navigation = () => {
             <div className="w-10 h-10 bg-gradient-to-br from-accent to-golden rounded-full flex items-center justify-center">
               <div className="w-6 h-6 bg-white/20 rounded-full"></div>
             </div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-accent to-golden bg-clip-text text-transparent">
+            <div className="text-2xl font-bold text-golden">
               First Cut Drones
             </div>
           </Link>
@@ -39,8 +39,8 @@ const Navigation = () => {
                 to={item.href}
                 className={`px-3 py-2 text-sm font-medium transition-colors ${
                   isActive(item.href)
-                    ? "text-accent"
-                    : "text-foreground-secondary hover:text-accent"
+                    ? "text-golden"
+                    : "text-foreground-secondary hover:text-golden"
                 }`}
               >
                 {item.name}
@@ -57,7 +57,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground"
+              className="text-golden"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -75,8 +75,8 @@ const Navigation = () => {
                 to={item.href}
                 className={`block px-3 py-2 text-base font-medium transition-colors ${
                   isActive(item.href)
-                    ? "text-accent"
-                    : "text-foreground-secondary hover:text-accent"
+                    ? "text-golden"
+                    : "text-foreground-secondary hover:text-golden"
                 }`}
                 onClick={() => setIsOpen(false)}
               >

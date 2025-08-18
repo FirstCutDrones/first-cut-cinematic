@@ -10,7 +10,7 @@ const MobileCTA = () => {
           <Link to="/quote">Start your Project</Link>
         </Button>
         <Button variant="outline" size="icon" className="shrink-0">
-          <MessageCircle className="h-4 w-4" />
+          <MessageCircle className="h-4 w-4 text-golden" />
         </Button>
       </div>
     </div>

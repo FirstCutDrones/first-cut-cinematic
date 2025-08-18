@@ -9,19 +9,19 @@ import { Play, Camera, Users } from "lucide-react";
 const Index = () => {
   const services = [
     {
-      icon: <Camera className="h-8 w-8" />,
+      icon: <Camera className="h-8 w-8 text-golden" />,
       title: "Trip Highlights",
       description: "Capture the memorable moments of your golf getaway with cinematic aerial footage and action sequences.",
       link: "/services"
     },
     {
-      icon: <Play className="h-8 w-8" />,
+      icon: <Play className="h-8 w-8 text-golden" />,
       title: "Signature Flyovers", 
       description: "Showcase your course's most iconic holes with professional drone videography and stunning aerial perspectives.",
       link: "/services"
     },
     {
-      icon: <Users className="h-8 w-8" />,
+      icon: <Users className="h-8 w-8 text-golden" />,
       title: "Full Course Packages",
       description: "Complete documentation of all 18 holes with detailed flyovers, perfect for course marketing and promotion.",
       link: "/services"
@@ -114,7 +114,7 @@ const Index = () => {
                 <Card key={index} className="card-hover group">
                   <CardContent className="p-8 text-center">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6 group-hover:bg-accent/20 transition-colors">
-                      <div className="text-accent">{service.icon}</div>
+                      <div className="text-golden">{service.icon}</div>
                     </div>
                     <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                     <p className="text-foreground-secondary mb-6">{service.description}</p>
