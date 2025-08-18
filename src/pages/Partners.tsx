@@ -28,40 +28,21 @@ const Partners = () => {
     }
   ];
 
-  const packages = [
-    {
-      title: "Starter Package",
-      description: "Perfect for smaller courses looking to enhance their digital presence",
-      features: [
-        "Signature hole flyover",
-        "Course overview shots",
-        "Social media package",
-        "Basic editing included"
-      ],
-      pricing: "Starting at $500"
-    },
-    {
-      title: "Professional Package",
-      description: "Comprehensive solution for established golf courses and resorts",
-      features: [
-        "Full 18-hole documentation",
-        "Promotional video creation",
-        "Raw footage library",
-        "Quarterly updates"
-      ],
-      pricing: "Starting at $2,500"
-    },
-    {
-      title: "Enterprise Package",
-      description: "Complete marketing solution for luxury resorts and tournament venues",
-      features: [
-        "Multiple course coverage",
-        "Event documentation",
-        "Live streaming capabilities",
-        "Dedicated account manager"
-      ],
-      pricing: "Custom pricing"
-    }
+  const partnershipFeatures = [
+    "Signature hole flyovers",
+    "Full 18-hole course documentation",
+    "Course overview and aerial shots",
+    "Tournament coverage and event documentation", 
+    "Promotional video creation",
+    "Social media content package",
+    "Raw footage library access",
+    "Live streaming capabilities",
+    "Multiple course coverage",
+    "Quarterly content updates",
+    "Professional editing and post-production",
+    "Dedicated account manager",
+    "Commercial usage rights",
+    "Custom delivery formats"
   ];
 
   return (
@@ -108,37 +89,39 @@ const Partners = () => {
           </div>
         </section>
 
-        {/* Packages Section */}
+        {/* Partnership Package Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-6">Partnership Packages</h2>
+              <h2 className="text-4xl font-bold mb-6">Partnership Package</h2>
               <p className="text-xl text-foreground-secondary">
-                Choose the package that best fits your course's needs and marketing goals.
+                Comprehensive aerial videography solution for golf courses of all sizes.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              {packages.map((pkg, index) => (
-                <Card key={index} className="card-hover">
-                  <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold mb-4">{pkg.title}</h3>
-                    <p className="text-foreground-secondary mb-6">{pkg.description}</p>
-                    <ul className="space-y-3 mb-8">
-                      {pkg.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm">
-                          <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="text-xl font-bold text-golden mb-6">{pkg.pricing}</div>
-                    <Button className="btn-cinematic w-full">
-                      Learn More
+            <div className="max-w-4xl mx-auto">
+              <Card className="card-hover">
+                <CardContent className="p-12">
+                  <h3 className="text-3xl font-bold mb-6 text-center">Complete Golf Course Partnership</h3>
+                  <p className="text-foreground-secondary mb-8 text-center text-lg">
+                    Professional aerial videography package including tournament coverage, course documentation, 
+                    and marketing content creation with full commercial usage rights.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4 mb-8">
+                    {partnershipFeatures.map((feature, index) => (
+                      <div key={index} className="flex items-center">
+                        <span className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span>
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-center">
+                    <Button className="btn-cinematic text-lg px-12 py-3">
+                      Get Custom Quote
                     </Button>
-                  </CardContent>
-                </Card>
-              ))}
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
