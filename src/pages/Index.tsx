@@ -82,14 +82,11 @@ const Index = () => {
         </section>
 
         {/* Hero Text Section */}
-        <section className="bg-black py-16 px-4">
+        <section className="bg-black py-8 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
               Cinematic drone videography that captures the precision, beauty, and excitement of golf like never before.
             </p>
-            <Button asChild className="btn-golden text-lg px-8 py-4">
-              <Link to="/quote">Start your Project</Link>
-            </Button>
           </div>
         </section>
 
