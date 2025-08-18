@@ -6,69 +6,62 @@
 
 @layer base {
   :root {
-    /* Dark Mode Aesthetic - Core Backgrounds */
-    --background: 216 12% 8%;          /* #111315 */
-    --background-secondary: 216 8% 12%; /* #1A1D1F */
-    --card: 216 6% 15%;                /* #232628 */
-    --card-foreground: 0 0% 95%;       /* #F1F1F1 */
+    /* New Color Scheme - Core Backgrounds */
+    --background: 0 0% 12%;            /* Deep Charcoal #1E1E1E */
+    --background-secondary: 200 9% 25%; /* Slate Overlay #3A3F44 */
+    --card: 200 8% 18%;                /* Slightly lighter than background */
+    --card-foreground: 56 20% 97%;     /* Cream White #F8F8F5 */
     
     /* Text Colors */
-    --foreground: 0 0% 95%;            /* #F1F1F1 */
-    --foreground-secondary: 0 0% 71%;  /* #B5B5B5 */
-    --foreground-muted: 0 0% 49%;      /* #7C7C7C */
+    --foreground: 56 20% 97%;          /* Cream White #F8F8F5 */
+    --foreground-secondary: 0 0% 48%;  /* Warm Graphite #7A7A7A */
+    --foreground-muted: 0 0% 35%;      /* Darker muted text */
     
-    /* Golf Green Accents */
-    --accent: 135 58% 62%;             /* #64D688 - CTA Green */
-    --accent-foreground: 216 12% 8%;   /* Dark text on green */
-    --accent-hover: 135 68% 56%;       /* #3CD277 - Hover Green */
-    --accent-subtle: 135 27% 31%;      /* #3A5F40 - Subtle Trim */
+    /* Forest Pine Accents */
+    --accent: 149 38% 19%;             /* Forest Pine #1D4032 */
+    --accent-foreground: 56 20% 97%;   /* Cream text on forest green */
+    --accent-hover: 149 38% 25%;       /* Lighter Forest Pine hover */
+    --accent-subtle: 145 31% 85%;      /* Ice Blue Mist #CFE6DC */
     
     /* Golden Rye Premium Accent */
-    --golden: 44 56% 61%;              /* #D9B85C */
-    --golden-foreground: 216 12% 8%;   /* Dark text on gold */
+    --golden: 44 56% 61%;              /* Golden Rye #D9B85C */
+    --golden-foreground: 0 0% 12%;     /* Deep Charcoal text on gold */
     
     /* System Colors */
-    --primary: 135 58% 62%;            /* Use golf green as primary */
-    --primary-foreground: 216 12% 8%;
-    --secondary: 216 6% 15%;           /* Card color */
-    --secondary-foreground: 0 0% 95%;
-    --muted: 216 8% 12%;               /* Secondary background */
-    --muted-foreground: 0 0% 71%;
+    --primary: 149 38% 19%;            /* Use Forest Pine as primary */
+    --primary-foreground: 56 20% 97%;  /* Cream White on primary */
+    --secondary: 200 8% 18%;           /* Card color */
+    --secondary-foreground: 56 20% 97%; /* Cream White */
+    --muted: 200 9% 25%;               /* Slate Overlay */
+    --muted-foreground: 0 0% 48%;      /* Warm Graphite */
     
     /* Interactive Elements */
-    --border: 216 6% 20%;              /* Subtle borders */
-    --input: 216 6% 15%;               /* Input backgrounds */
-    --ring: 135 58% 62%;               /* Focus rings use golf green */
+    --border: 200 8% 25%;              /* Subtle borders */
+    --input: 200 8% 18%;               /* Input backgrounds */
+    --ring: 149 38% 19%;               /* Focus rings use Forest Pine */
     
     /* Popover/Dialog */
-    --popover: 216 6% 15%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 200 8% 18%;             /* Match card color */
+    --popover-foreground: 56 20% 97%;  /* Cream White */
     
     /* Destructive */
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 95%;
+    --destructive-foreground: 56 20% 97%; /* Cream White */
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 56 20% 97%;   /* Cream White */
+    --sidebar-foreground: 0 0% 12%;     /* Deep Charcoal */
+    --sidebar-primary: 149 38% 19%;     /* Forest Pine */
+    --sidebar-primary-foreground: 56 20% 97%; /* Cream White */
+    --sidebar-accent: 145 31% 85%;      /* Ice Blue Mist */
+    --sidebar-accent-foreground: 149 38% 19%; /* Forest Pine */
+    --sidebar-border: 200 8% 25%;       /* Slate Overlay */
+    --sidebar-ring: 149 38% 19%;        /* Forest Pine */
     
     /* Cinematic Effects */
-    --glow: 135 58% 62%;
-    --glow-subtle: 135 27% 31%;
+    --glow: 149 38% 19%;               /* Forest Pine glow */
+    --glow-subtle: 145 31% 85%;        /* Ice Blue Mist subtle glow */
     --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background-secondary)) 100%);
     --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--background-secondary)) 100%);
     --gradient-cta: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-hover)) 100%);
