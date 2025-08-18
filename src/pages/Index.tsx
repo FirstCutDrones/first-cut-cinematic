@@ -74,7 +74,7 @@ const Index = () => {
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 text-white fade-in">
               Your Golf Game,<br />
-              <span className="text-glow bg-gradient-to-r from-accent to-golden bg-clip-text text-transparent">
+              <span className="text-golden">
                 From a New Perspective
               </span>
             </h1>
