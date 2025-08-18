@@ -6,9 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const Quote = () => {
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,10 +22,57 @@ const Quote = () => {
     notes: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // EmailJS configuration - Replace these with your actual EmailJS values
+  const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+  const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+  const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    setIsLoading(true);
+
+    try {
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          service_type: formData.serviceType,
+          preferred_date: formData.date,
+          location: formData.location,
+          project_details: formData.notes,
+          to_email: "hello@firstcutdrones.com", // Your email
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+
+      toast({
+        title: "Quote Request Sent!",
+        description: "We'll get back to you within 24 hours with a detailed quote.",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        serviceType: "",
+        date: "",
+        location: "",
+        notes: ""
+      });
+
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send your request. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -134,8 +185,8 @@ const Quote = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="btn-golden w-full text-lg py-3">
-                    Submit Quote Request
+                  <Button type="submit" className="btn-golden w-full text-lg py-3" disabled={isLoading}>
+                    {isLoading ? "Sending..." : "Submit Quote Request"}
                   </Button>
 
                   <p className="text-sm text-foreground-secondary text-center">
