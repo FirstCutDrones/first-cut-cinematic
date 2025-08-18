@@ -54,10 +54,19 @@ const Index = () => {
         {/* Hero Section */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img 
-              src="/hero-image.jpg" 
-              alt="Aerial golf course view"
-              className="hero-image w-full h-full object-cover animate-fade-in"
+            <iframe
+              src="https://player.vimeo.com/video/1111039609?background=1&autoplay=1&loop=1&byline=0&title=0&portrait=0&muted=1&controls=0"
+              className="w-full h-full object-cover"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                border: 'none'
+              }}
+              allow="autoplay; fullscreen"
+              title="Golf Course Aerial Video"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/40" />
           </div>
