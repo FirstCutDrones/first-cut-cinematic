@@ -5,26 +5,26 @@ import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Users, Camera, Award } from "lucide-react";
 
 const Partners = () => {
-  const benefits = [
-    {
-      icon: <Users className="h-8 w-8 text-golden" />,
-      title: "Expand Membership Reach",
-      description: "Attract new members with stunning aerial showcases that highlight your course's premium amenities and exclusive features."
-    },
+  const inclusions = [
     {
       icon: <Award className="h-8 w-8 text-golden" />,
-      title: "Tournament Coverage Excellence", 
-      description: "Professional event documentation that enhances your tournament reputation and attracts future prestigious golf events."
-    },
-    {
-      icon: <TrendingUp className="h-8 w-8 text-golden" />,
-      title: "Increased Marketing Reach",
-      description: "Professional aerial content that showcases your course's unique features and drives social media engagement."
+      title: "Tournament Coverage",
+      description: "Professional aerial documentation of your tournaments and special events, capturing the excitement and prestige of your venue."
     },
     {
       icon: <Camera className="h-8 w-8 text-golden" />,
-      title: "Volume Discounts & Licensing",
-      description: "Significant savings on multiple services with full commercial usage rights across all your marketing channels."
+      title: "Hole by Hole Course Overview", 
+      description: "Complete aerial documentation of every hole on your course, showcasing the layout, challenges, and beauty of your design."
+    },
+    {
+      icon: <TrendingUp className="h-8 w-8 text-golden" />,
+      title: "Promotional Video",
+      description: "Custom-crafted promotional video that highlights your course's best features and attracts new players and events."
+    },
+    {
+      icon: <Users className="h-8 w-8 text-golden" />,
+      title: "Website Sizzle Reel",
+      description: "Dynamic short-form video content perfect for your website homepage to immediately capture visitor attention and showcase your course."
     }
   ];
 
@@ -63,25 +63,25 @@ const Partners = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Package Inclusions Section */}
         <section className="py-16 px-4 bg-background-secondary">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-6">Partnership Benefits</h2>
+              <h2 className="text-4xl font-bold mb-6">Partnership Package Inclusions</h2>
               <p className="text-xl text-foreground-secondary">
-                Discover how our partnership program can transform your course marketing and boost revenue.
+                Everything included in our comprehensive golf course partnership package.
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {inclusions.map((inclusion, index) => (
                 <Card key={index} className="card-hover text-center">
                   <CardContent className="p-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4">
-                      <div className="text-golden">{benefit.icon}</div>
+                      <div className="text-golden">{inclusion.icon}</div>
                     </div>
-                    <h3 className="text-lg font-semibold mb-3">{benefit.title}</h3>
-                    <p className="text-foreground-secondary text-sm">{benefit.description}</p>
+                    <h3 className="text-lg font-semibold mb-3">{inclusion.title}</h3>
+                    <p className="text-foreground-secondary text-sm">{inclusion.description}</p>
                   </CardContent>
                 </Card>
               ))}
