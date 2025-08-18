@@ -82,7 +82,7 @@ const Index = () => {
               Cinematic drone videography that captures the precision, beauty, and excitement of golf like never before.
             </p>
             <Button asChild className="btn-golden text-lg px-8 py-4">
-              <Link to="/quote">Get a Quote</Link>
+              <Link to="/quote">Start your Project</Link>
             </Button>
           </div>
         </section>

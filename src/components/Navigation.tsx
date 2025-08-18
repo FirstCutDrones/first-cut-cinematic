@@ -47,7 +47,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Button asChild className="btn-golden">
-              <Link to="/quote">Get a Quote</Link>
+              <Link to="/quote">Start your Project</Link>
             </Button>
           </div>
 
@@ -86,7 +86,7 @@ const Navigation = () => {
             <div className="px-3 py-2">
               <Button asChild className="btn-golden w-full">
                 <Link to="/quote" onClick={() => setIsOpen(false)}>
-                  Get a Quote
+                  Start your Project
                 </Link>
               </Button>
             </div>
