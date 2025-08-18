@@ -68,7 +68,7 @@ const Index = () => {
               allow="autoplay; fullscreen"
               title="Golf Course Aerial Video"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-black/20" />
           </div>
           
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -78,6 +78,12 @@ const Index = () => {
                 From a New Perspective
               </span>
             </h1>
+          </div>
+        </section>
+
+        {/* Hero Text Section */}
+        <section className="bg-black py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
               Cinematic drone videography that captures the precision, beauty, and excitement of golf like never before.
             </p>
