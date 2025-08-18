@@ -52,7 +52,7 @@ const Index = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[75vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <iframe
               src="https://player.vimeo.com/video/1111039609?background=1&autoplay=1&loop=1&byline=0&title=0&portrait=0&muted=1&controls=0"
