@@ -22,10 +22,10 @@ const Quote = () => {
     notes: ""
   });
 
-  // EmailJS configuration - Replace these with your actual EmailJS values
-  const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-  const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-  const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+  // EmailJS configuration
+  const EMAILJS_SERVICE_ID = "service_o3n71qp";
+  const EMAILJS_TEMPLATE_ID = "template_eip9w0d";
+  const EMAILJS_PUBLIC_KEY = "cyOsaQR8KOK-BJZ3X";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
