@@ -21,7 +21,11 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-3">
+            {/* Logo Placeholder */}
+            <div className="w-10 h-10 bg-gradient-to-br from-accent to-golden rounded-full flex items-center justify-center">
+              <div className="w-6 h-6 bg-white/20 rounded-full"></div>
+            </div>
             <div className="text-2xl font-bold bg-gradient-to-r from-accent to-golden bg-clip-text text-transparent">
               First Cut Drones
             </div>
