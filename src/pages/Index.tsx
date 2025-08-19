@@ -90,8 +90,8 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Company Introduction */}
-        <section className="py-20 px-4 bg-background-secondary">
+        {/* Company Introduction - Simplified layout */}
+        <div className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Where Precision Meets Innovation</h2>
             <p className="text-xl text-foreground-secondary leading-relaxed">
@@ -100,67 +100,63 @@ const Index = () => {
               every moment from breathtaking aerial perspectives.
             </p>
           </div>
-        </section>
+        </div>
 
-        {/* Services */}
-        <section className="py-20 px-4">
+        {/* Services - Less boxey design */}
+        <div className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-6">Our Services</h2>
               <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
                 Professional drone videography services tailored for golf courses, events, and memorable golf experiences.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6">
               {services.map((service, index) => (
-                <Card key={index} className="card-hover group">
-                  <CardContent className="p-8 text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6 group-hover:bg-accent/20 transition-colors">
-                      <div className="text-golden">{service.icon}</div>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                    <p className="text-foreground-secondary mb-6">{service.description}</p>
-                    <Button asChild variant="outline" className="group-hover:bg-accent group-hover:text-accent-foreground">
-                      <Link to={service.link}>Learn More</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
+                <div key={index} className="bg-gradient-primary rounded-lg p-8 text-center transition-transform hover:scale-105">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-golden/20 rounded-full mb-6">
+                    <div className="text-golden">{service.icon}</div>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-card-foreground">{service.title}</h3>
+                  <p className="text-card-foreground/90 mb-6">{service.description}</p>
+                  <Button asChild variant="outline" className="border-golden text-golden hover:bg-golden hover:text-card">
+                    <Link to={service.link}>Learn More</Link>
+                  </Button>
+                </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Testimonials */}
-        <section className="py-20 px-4 bg-background-secondary">
+        {/* Testimonials - Simplified */}
+        <div className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-6">What Our Clients Say</h2>
               <p className="text-xl text-foreground-secondary">
                 Trusted by golf courses, event organizers, and golf enthusiasts worldwide.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className="card-hover">
-                  <CardContent className="p-8">
-                    <blockquote className="text-lg italic mb-6 text-foreground-secondary">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    <div className="border-t border-border pt-4">
-                      <div className="font-semibold">{testimonial.author}</div>
-                      <div className="text-sm text-foreground-secondary">{testimonial.course}</div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div key={index} className="bg-gradient-primary rounded-lg p-8 transition-transform hover:scale-105">
+                  <blockquote className="text-lg italic mb-6 text-card-foreground/90">
+                    "{testimonial.quote}"
+                  </blockquote>
+                  <div className="border-t border-golden/30 pt-4">
+                    <div className="font-semibold text-card-foreground">{testimonial.author}</div>
+                    <div className="text-sm text-card-foreground/80">{testimonial.course}</div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Final CTA */}
-        <section className="py-20 px-4">
+        {/* Final CTA - Simplified */}
+        <div className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Elevate Your Golf Content?</h2>
             <p className="text-xl text-foreground-secondary mb-8">
@@ -171,12 +167,12 @@ const Index = () => {
               <Button asChild className="btn-golden text-lg px-8 py-3">
                 <Link to="/quote">Start Your Project</Link>
               </Button>
-              <Button asChild variant="outline" className="text-lg px-8 py-3">
+              <Button asChild variant="outline" className="text-lg px-8 py-3 border-foreground text-foreground hover:bg-foreground hover:text-background">
                 <Link to="/gallery">View Our Work</Link>
               </Button>
             </div>
           </div>
-        </section>
+        </div>
       </main>
 
       <MobileCTA />

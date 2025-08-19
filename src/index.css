@@ -6,71 +6,72 @@
 
 @layer base {
   :root {
-    /* New Color Scheme - Core Backgrounds */
-    --background: 0 0% 12%;            /* Deep Charcoal #1E1E1E */
-    --background-secondary: 200 9% 25%; /* Slate Overlay #3A3F44 */
-    --card: 200 8% 18%;                /* Slightly lighter than background */
-    --card-foreground: 56 20% 97%;     /* Cream White #F8F8F5 */
+    /* New Color Scheme - Creamy white background with forest green text */
+    --background: 45 15% 96%;           /* Creamy White */
+    --background-secondary: 45 12% 94%; /* Slightly darker cream */
+    --card: 0 0% 48%;                   /* Warm Graphite #7A7A7A */
+    --card-foreground: 44 62% 61%;      /* Golden Rye #D9B85C text on graphite */
     
     /* Text Colors */
-    --foreground: 56 20% 97%;          /* Cream White #F8F8F5 */
-    --foreground-secondary: 0 0% 48%;  /* Warm Graphite #7A7A7A */
-    --foreground-muted: 0 0% 35%;      /* Darker muted text */
+    --foreground: 156 38% 18%;          /* Forest Green #1D4032 */
+    --foreground-secondary: 156 30% 25%; /* Lighter forest green */
+    --foreground-muted: 156 20% 35%;    /* Muted forest green */
     
-    /* Forest Pine Accents */
-    --accent: 149 38% 19%;             /* Forest Pine #1D4032 */
-    --accent-foreground: 56 20% 97%;   /* Cream text on forest green */
-    --accent-hover: 149 38% 25%;       /* Lighter Forest Pine hover */
-    --accent-subtle: 145 31% 85%;      /* Ice Blue Mist #CFE6DC */
+    /* Warm Graphite Card System */
+    --accent: 0 0% 48%;                 /* Warm Graphite */
+    --accent-foreground: 44 62% 61%;    /* Golden Rye text on graphite */
+    --accent-hover: 0 0% 40%;           /* Darker graphite on hover */
+    --accent-subtle: 0 0% 55%;          /* Lighter graphite */
     
     /* Golden Rye Premium Accent */
-    --golden: 44 56% 61%;              /* Golden Rye #D9B85C */
-    --golden-foreground: 0 0% 12%;     /* Deep Charcoal text on gold */
+    --golden: 44 62% 61%;               /* Golden Rye #D9B85C */
+    --golden-foreground: 0 0% 48%;      /* Graphite text on gold */
     
     /* System Colors */
-    --primary: 149 38% 19%;            /* Use Forest Pine as primary */
-    --primary-foreground: 56 20% 97%;  /* Cream White on primary */
-    --secondary: 200 8% 18%;           /* Card color */
-    --secondary-foreground: 56 20% 97%; /* Cream White */
-    --muted: 200 9% 25%;               /* Slate Overlay */
-    --muted-foreground: 0 0% 48%;      /* Warm Graphite */
+    --primary: 156 38% 18%;             /* Forest Green */
+    --primary-foreground: 45 15% 96%;   /* Creamy white on primary */
+    --secondary: 0 0% 48%;              /* Warm Graphite */
+    --secondary-foreground: 44 62% 61%; /* Golden Rye text */
+    --muted: 0 0% 52%;                  /* Lighter graphite for muted */
+    --muted-foreground: 44 55% 55%;     /* Muted golden rye */
     
     /* Interactive Elements */
-    --border: 200 8% 25%;              /* Subtle borders */
-    --input: 200 8% 18%;               /* Input backgrounds */
-    --ring: 149 38% 19%;               /* Focus rings use Forest Pine */
+    --border: 0 0% 75%;                 /* Light graphite borders */
+    --input: 0 0% 75%;                  /* Light graphite inputs */
+    --ring: 156 38% 18%;                /* Forest green focus rings */
     
     /* Popover/Dialog */
-    --popover: 200 8% 18%;             /* Match card color */
-    --popover-foreground: 56 20% 97%;  /* Cream White */
+    --popover: 0 0% 48%;                /* Warm graphite popover */
+    --popover-foreground: 44 62% 61%;   /* Golden Rye text */
     
     /* Destructive */
     --destructive: 0 84% 60%;
-    --destructive-foreground: 56 20% 97%; /* Cream White */
+    --destructive-foreground: 45 15% 96%; /* Creamy white */
 
     --radius: 0.75rem;
 
-    --sidebar-background: 56 20% 97%;   /* Cream White */
-    --sidebar-foreground: 0 0% 12%;     /* Deep Charcoal */
-    --sidebar-primary: 149 38% 19%;     /* Forest Pine */
-    --sidebar-primary-foreground: 56 20% 97%; /* Cream White */
-    --sidebar-accent: 145 31% 85%;      /* Ice Blue Mist */
-    --sidebar-accent-foreground: 149 38% 19%; /* Forest Pine */
-    --sidebar-border: 200 8% 25%;       /* Slate Overlay */
-    --sidebar-ring: 149 38% 19%;        /* Forest Pine */
+    --sidebar-background: 45 12% 94%;    /* Cream background */
+    --sidebar-foreground: 156 38% 18%;   /* Forest green text */
+    --sidebar-primary: 156 38% 18%;      /* Forest green */
+    --sidebar-primary-foreground: 45 15% 96%; /* Cream white */
+    --sidebar-accent: 0 0% 48%;          /* Warm graphite */
+    --sidebar-accent-foreground: 44 62% 61%; /* Golden rye */
+    --sidebar-border: 0 0% 75%;          /* Light graphite */
+    --sidebar-ring: 44 62% 61%;          /* Golden rye */
     
-    /* Cinematic Effects */
-    --glow: 149 38% 19%;               /* Forest Pine glow */
-    --glow-subtle: 145 31% 85%;        /* Ice Blue Mist subtle glow */
+    /* Cinematic Effects - Updated for new palette */
+    --glow: 44 62% 61%;                  /* Golden rye glow */
+    --glow-subtle: 0 0% 48%;             /* Graphite subtle glow */
     --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background-secondary)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--background-secondary)) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-hover)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(0 0% 42%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 48%) 0%, hsl(0 0% 42%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(var(--golden)) 0%, hsl(44 65% 55%) 100%);
     --gradient-golden: linear-gradient(135deg, hsl(var(--golden)) 0%, hsl(44 65% 55%) 100%);
     
     /* Shadows */
-    --shadow-subtle: 0 2px 8px hsl(var(--background) / 0.3);
-    --shadow-glow: 0 0 20px hsl(var(--accent) / 0.2);
-    --shadow-golden: 0 0 30px hsl(var(--golden) / 0.3);
+    --shadow-subtle: 0 2px 8px hsl(0 0% 30% / 0.2);
+    --shadow-glow: 0 0 20px hsl(var(--golden) / 0.3);
+    --shadow-golden: 0 0 30px hsl(var(--golden) / 0.4);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
