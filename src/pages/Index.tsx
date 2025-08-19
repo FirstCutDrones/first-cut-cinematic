@@ -82,9 +82,9 @@ const Index = () => {
         </section>
 
         {/* Hero Text Section */}
-        <section className="bg-black py-8 px-4">
+        <section className="py-8 px-4" style={{ background: 'linear-gradient(180deg, hsl(0 0% 48%) 0%, hsl(45 15% 96%) 100%)' }}>
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-foreground max-w-2xl mx-auto">
               Cinematic drone videography that captures the precision, beauty, and excitement of golf like never before.
             </p>
           </div>
