@@ -101,7 +101,7 @@ const Blog = () => {
         {/* Featured Post */}
         <section className="px-4 mb-16">
           <div className="max-w-7xl mx-auto">
-            <Card className="card-hover overflow-hidden">
+            <Card className="card-hover overflow-hidden bg-card-light border-card-light/20">
               <div className="md:flex">
                 <div className="md:w-1/2">
                   <img
@@ -111,14 +111,14 @@ const Blog = () => {
                   />
                 </div>
                 <div className="md:w-1/2 p-8 md:p-12">
-                  <div className="flex items-center space-x-4 text-sm text-foreground-secondary mb-4">
+                  <div className="flex items-center space-x-4 text-sm text-card-light-foreground/70 mb-4">
                     <span className="bg-accent/20 text-accent px-3 py-1 rounded-full">Featured</span>
                     <span>{posts[0].category}</span>
                   </div>
-                  <h2 className="text-3xl font-bold mb-4">{posts[0].title}</h2>
-                  <p className="text-foreground-secondary mb-6 text-lg">{posts[0].excerpt}</p>
+                  <h2 className="text-3xl font-bold mb-4 text-card-light-foreground">{posts[0].title}</h2>
+                  <p className="text-card-light-foreground/80 mb-6 text-lg">{posts[0].excerpt}</p>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4 text-sm text-foreground-secondary">
+                    <div className="flex items-center space-x-4 text-sm text-card-light-foreground/70">
                       <div className="flex items-center space-x-1">
                         <User className="h-4 w-4 text-golden" />
                         <span>{posts[0].author}</span>
@@ -145,7 +145,7 @@ const Blog = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.slice(1).map((post, index) => (
-                <Card key={index} className="card-hover group overflow-hidden">
+                <Card key={index} className="card-hover group overflow-hidden bg-card-light border-card-light/20">
                   <CardContent className="p-0">
                     <div className="relative">
                       <img
@@ -160,11 +160,11 @@ const Blog = () => {
                       </div>
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors">
+                      <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors text-card-light-foreground">
                         {post.title}
                       </h3>
-                      <p className="text-foreground-secondary mb-4 text-sm line-clamp-3">{post.excerpt}</p>
-                      <div className="flex items-center justify-between text-sm text-foreground-secondary">
+                      <p className="text-card-light-foreground/80 mb-4 text-sm line-clamp-3">{post.excerpt}</p>
+                      <div className="flex items-center justify-between text-sm text-card-light-foreground/70">
                         <div className="flex items-center space-x-2">
                           <Calendar className="h-4 w-4 text-golden" />
                           <span>{post.date}</span>
