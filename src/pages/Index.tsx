@@ -68,7 +68,7 @@ const Index = () => {
               allow="autoplay; fullscreen"
               title="Golf Course Aerial Video"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" style={{ background: 'linear-gradient(to top, hsl(0 0% 48% / 0.6), hsl(0 0% 48% / 0.2), transparent)' }} />
           </div>
           
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
