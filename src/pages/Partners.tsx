@@ -75,13 +75,13 @@ const Partners = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {inclusions.map((inclusion, index) => (
-                <Card key={index} className="card-hover text-center">
+                <Card key={index} className="card-hover text-center bg-card-light border-card-light/20">
                   <CardContent className="p-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4">
                       <div className="text-golden">{inclusion.icon}</div>
                     </div>
-                    <h3 className="text-lg font-semibold mb-3">{inclusion.title}</h3>
-                    <p className="text-foreground-secondary text-sm">{inclusion.description}</p>
+                    <h3 className="text-lg font-semibold mb-3 text-card-light-foreground">{inclusion.title}</h3>
+                    <p className="text-card-light-foreground/80 text-sm">{inclusion.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -100,10 +100,10 @@ const Partners = () => {
             </div>
             
             <div className="max-w-4xl mx-auto">
-              <Card className="card-hover">
+              <Card className="card-hover bg-card-light border-card-light/20">
                 <CardContent className="p-12">
-                  <h3 className="text-3xl font-bold mb-6 text-center">Complete Golf Course Partnership</h3>
-                  <p className="text-foreground-secondary mb-8 text-center text-lg">
+                  <h3 className="text-3xl font-bold mb-6 text-center text-card-light-foreground">Complete Golf Course Partnership</h3>
+                  <p className="text-card-light-foreground/80 mb-8 text-center text-lg">
                     Professional aerial videography package including tournament coverage, course documentation, 
                     and marketing content creation with full commercial usage rights.
                   </p>
@@ -111,7 +111,7 @@ const Partners = () => {
                     {partnershipFeatures.map((feature, index) => (
                       <div key={index} className="flex items-center">
                         <span className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span>
-                        <span className="text-sm">{feature}</span>
+                        <span className="text-sm text-card-light-foreground/70">{feature}</span>
                       </div>
                     ))}
                   </div>
