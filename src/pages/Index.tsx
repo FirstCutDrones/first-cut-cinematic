@@ -109,8 +109,8 @@ const Index = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-golden/20 rounded-full mb-6">
                     <div className="text-golden">{service.icon}</div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-card-foreground">{service.title}</h3>
-                  <p className="text-card-foreground/90 mb-6">{service.description}</p>
+                  <h3 className="text-2xl font-bold mb-4 text-foreground">{service.title}</h3>
+                  <p className="text-foreground/90 mb-6">{service.description}</p>
                   <Button asChild variant="outline" className="border-golden text-golden hover:bg-golden hover:text-card">
                     <Link to={service.link}>Learn More</Link>
                   </Button>
@@ -133,12 +133,12 @@ const Index = () => {
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-gradient-primary rounded-lg p-8 transition-transform hover:scale-105">
-                  <blockquote className="text-lg italic mb-6 text-card-foreground/90">
+                  <blockquote className="text-lg italic mb-6 text-foreground/90">
                     "{testimonial.quote}"
                   </blockquote>
                   <div className="border-t border-golden/30 pt-4">
-                    <div className="font-semibold text-card-foreground">{testimonial.author}</div>
-                    <div className="text-sm text-card-foreground/80">{testimonial.course}</div>
+                    <div className="font-semibold text-foreground">{testimonial.author}</div>
+                    <div className="text-sm text-foreground/80">{testimonial.course}</div>
                   </div>
                 </div>
               ))}
