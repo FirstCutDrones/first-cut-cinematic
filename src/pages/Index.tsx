@@ -68,7 +68,7 @@ const Index = () => {
               allow="autoplay; fullscreen"
               title="Golf Course Aerial Video"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" style={{ background: 'linear-gradient(to top, hsl(0 0% 48% / 0.6), hsl(0 0% 48% / 0.2), transparent)' }} />
+            
           </div>
           
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -82,9 +82,9 @@ const Index = () => {
         </section>
 
         {/* Hero Text Section */}
-        <section className="py-8 px-4 bg-accent">
+        <section className="py-8 px-4 bg-background">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-xl md:text-2xl text-accent-foreground max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-foreground max-w-2xl mx-auto">
               Cinematic drone videography that captures the precision, beauty, and excitement of golf like never before.
             </p>
           </div>
