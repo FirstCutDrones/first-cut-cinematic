@@ -11,7 +11,7 @@ const Index = () => {
     {
       icon: <Camera className="h-8 w-8 text-golden" />,
       title: "Trip Highlights",
-      description: "Capture the memorable moments of your golf getaway with cinematic aerial footage and action sequences.",
+      description: "Capture the memorable moments of your golf getaway with cinematic aerial footage, full audio cart cams, and action sequences.",
       link: "/services"
     },
     {
