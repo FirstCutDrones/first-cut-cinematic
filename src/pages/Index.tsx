@@ -86,9 +86,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Where Precision Meets Innovation</h2>
             <p className="text-xl text-foreground-secondary leading-relaxed">
-              First Cut Drones specializes in luxury drone videography for golf courses, tournaments, and golf adventures. 
-              We blend the precision of golf with cutting-edge drone technology to create cinematic content that captures 
-              every moment from breathtaking aerial perspectives.
+              First Cut Drones specializes in cinematic drone videography, capturing every moment of the beauty and excitement of golf like never before for golf courses, tournaments, and golf adventures. 
             </p>
           </div>
         </div>
