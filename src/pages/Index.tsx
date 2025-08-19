@@ -81,15 +81,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Hero Text Section */}
-        <section className="py-8 px-4 bg-background">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-xl md:text-2xl text-foreground max-w-2xl mx-auto">
-              Cinematic drone videography that captures the precision, beauty, and excitement of golf like never before.
-            </p>
-          </div>
-        </section>
-
         {/* Company Introduction - Simplified layout */}
         <div className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
