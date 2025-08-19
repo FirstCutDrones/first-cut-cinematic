@@ -60,7 +60,7 @@ const Services = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               {services.map((service, index) => (
-                <Card key={index} className="card-hover group overflow-hidden">
+                <Card key={index} className="card-hover group overflow-hidden bg-card-light border-card-light/20">
                   <CardContent className="p-0">
                     <div className="relative h-64 overflow-hidden">
                       <img
@@ -76,11 +76,11 @@ const Services = () => {
                       </div>
                     </div>
                     <div className="p-6">
-                      <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                      <p className="text-foreground-secondary mb-4">{service.description}</p>
+                      <h3 className="text-2xl font-bold mb-3 text-card-light-foreground">{service.title}</h3>
+                      <p className="text-card-light-foreground/80 mb-4">{service.description}</p>
                       <ul className="space-y-2 mb-6">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="text-sm text-foreground-secondary flex items-center">
+                          <li key={featureIndex} className="text-sm text-card-light-foreground/70 flex items-center">
                             <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
                             {feature}
                           </li>

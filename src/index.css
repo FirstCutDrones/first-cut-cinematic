@@ -23,6 +23,10 @@
     --accent-hover: 0 0% 40%;           /* Darker graphite on hover */
     --accent-subtle: 0 0% 55%;          /* Lighter graphite */
     
+    /* Light Warm Gray for Service Cards */
+    --card-light: 30 8% 82%;            /* Light warm gray #D4CFC7 */
+    --card-light-foreground: 156 38% 18%; /* Forest green text on light gray */
+    
     /* Golden Rye Premium Accent */
     --golden: 44 62% 61%;               /* Golden Rye #D9B85C */
     --golden-foreground: 0 0% 48%;      /* Graphite text on gold */
@@ -149,7 +153,7 @@
   
   /* Service Card Image Effects */
   .service-image {
-    @apply transition-all duration-500 brightness-75;
+    @apply transition-all duration-500 brightness-95;
   }
   
   .service-image:hover,
