@@ -25,7 +25,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/391d8681-88d4-4739-9b98-d0faac62fac9.png" 
               alt="First Cut Drones Logo" 
-              className="h-12 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 
