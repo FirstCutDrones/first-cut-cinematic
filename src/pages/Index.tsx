@@ -25,14 +25,12 @@ const Index = () => {
         const logoScale = Math.max(0.1, 1 - progress * 1.2);
         setLogoScale(logoScale);
         
-        // Text zooms in initially, then scales down
-        const textScale = progress < 0.3 
-          ? 1 + progress * 0.8  // Zoom in first 30% of scroll
-          : Math.max(0.2, 1.24 - (progress - 0.3) * 1.5); // Then zoom out
+        // Text only zooms in and stays at that scale
+        const textScale = Math.min(1.5, 1 + progress * 0.8);
         setTextScale(textScale);
       } else {
         setLogoScale(0.1);
-        setTextScale(0.2);
+        setTextScale(1.5);
       }
     };
 
