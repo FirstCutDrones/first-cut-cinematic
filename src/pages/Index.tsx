@@ -100,7 +100,7 @@ const Index = () => {
       
       {/* Fixed Logo and Slogan that scale differently with scroll */}
       <div 
-        className="fixed inset-0 z-10 flex items-center justify-center pointer-events-none"
+        className="fixed inset-0 z-10 flex items-start justify-center pt-32 pointer-events-none"
         style={{
           opacity: logoScale > 0.05 || textScale > 0.1 ? 1 : 0,
           transition: 'opacity 0.3s ease-out'
