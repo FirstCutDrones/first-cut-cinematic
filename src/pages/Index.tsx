@@ -118,7 +118,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/61767fed-6d4f-4ea9-a60d-60d020ea5a1f.png" 
               alt="First Cut Drones Logo" 
-              className="w-[32rem] h-[32rem] md:w-[48rem] md:h-[48rem] object-contain"
+              className="w-[25.6rem] h-[25.6rem] md:w-[38.4rem] md:h-[38.4rem] object-contain"
             />
           </div>
           
