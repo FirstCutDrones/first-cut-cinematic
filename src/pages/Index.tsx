@@ -8,21 +8,31 @@ import { useEffect, useState } from "react";
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [sloganScale, setSloganScale] = useState(1);
+  const [logoScale, setLogoScale] = useState(1);
+  const [textScale, setTextScale] = useState(1);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setScrollY(currentScrollY);
       
-      // Calculate slogan scale based on scroll position
-      // Scale down the slogan for the first 3 viewport heights of scrolling
+      // Calculate different scales for logo and text
       const scaleScrollThreshold = window.innerHeight * 3;
       if (currentScrollY <= scaleScrollThreshold) {
-        const scale = Math.max(0, 1 - (currentScrollY / scaleScrollThreshold) * 0.8);
-        setSloganScale(scale);
+        const progress = currentScrollY / scaleScrollThreshold;
+        
+        // Logo zooms out (scales down faster)
+        const logoScale = Math.max(0.1, 1 - progress * 1.2);
+        setLogoScale(logoScale);
+        
+        // Text zooms in initially, then scales down
+        const textScale = progress < 0.3 
+          ? 1 + progress * 0.8  // Zoom in first 30% of scroll
+          : Math.max(0.2, 1.24 - (progress - 0.3) * 1.5); // Then zoom out
+        setTextScale(textScale);
       } else {
-        setSloganScale(0.2);
+        setLogoScale(0.1);
+        setTextScale(0.2);
       }
     };
 
@@ -90,27 +100,44 @@ const Index = () => {
       </div>
 
       
-      {/* Fixed Slogan that scales with scroll */}
+      {/* Fixed Logo and Slogan that scale differently with scroll */}
       <div 
         className="fixed inset-0 z-10 flex items-center justify-center pointer-events-none"
         style={{
-          opacity: sloganScale > 0.1 ? 1 : 0,
+          opacity: logoScale > 0.05 || textScale > 0.1 ? 1 : 0,
           transition: 'opacity 0.3s ease-out'
         }}
       >
-        <div 
-          className="text-center px-4 max-w-4xl mx-auto"
-          style={{
-            transform: `scale(${sloganScale})`,
-            transition: 'transform 0.1s ease-out'
-          }}
-        >
-          <h1 className="text-4xl md:text-7xl font-bold mb-6 text-white">
-            Your Golf Game,<br />
-            <span className="text-golden">
-              From a New Perspective
-            </span>
-          </h1>
+        <div className="text-center px-4 max-w-4xl mx-auto">
+          {/* Logo */}
+          <div 
+            className="mb-8 flex justify-center"
+            style={{
+              transform: `scale(${logoScale})`,
+              transition: 'transform 0.1s ease-out'
+            }}
+          >
+            <img 
+              src="/lovable-uploads/235a98b2-5c7a-4b4e-b0d3-376b892bfa2c.png" 
+              alt="First Cut Drones Logo" 
+              className="w-32 h-32 md:w-48 md:h-48 object-contain"
+            />
+          </div>
+          
+          {/* Text */}
+          <div
+            style={{
+              transform: `scale(${textScale})`,
+              transition: 'transform 0.1s ease-out'
+            }}
+          >
+            <h1 className="text-4xl md:text-7xl font-bold mb-6 text-white">
+              Your Golf Game,<br />
+              <span className="text-golden">
+                From a New Perspective
+              </span>
+            </h1>
+          </div>
         </div>
       </div>
 
