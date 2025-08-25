@@ -111,7 +111,7 @@ const Index = () => {
         <div className="text-center px-4 max-w-4xl mx-auto">
           {/* Logo */}
           <div 
-            className="mb-8 flex justify-center"
+            className="mb-4 flex justify-center"
             style={{
               transform: `scale(${logoScale})`,
               transition: 'transform 0.1s ease-out'
