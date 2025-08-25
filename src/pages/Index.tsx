@@ -120,7 +120,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/235a98b2-5c7a-4b4e-b0d3-376b892bfa2c.png" 
               alt="First Cut Drones Logo" 
-              className="w-80 h-80 md:w-[30rem] md:h-[30rem] object-contain"
+              className="w-[40rem] h-[40rem] md:w-[60rem] md:h-[60rem] object-contain"
             />
           </div>
           
