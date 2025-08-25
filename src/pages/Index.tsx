@@ -32,19 +32,19 @@ const Index = () => {
 
   const galleryImages = [
     {
-      src: "/lovable-uploads/8d91ef05-4509-4733-82d2-efdf4f334b64.png",
-      title: "Sunset Golf Course",
-      alt: "Beautiful sunset over golf course with water reflection"
-    },
-    {
       src: "/lovable-uploads/1248dd04-4651-4e22-9cf0-d05c9d2166e7.png", 
-      title: "Golf Group Photo",
+      title: "Trips",
       alt: "Group of golfers on desert golf course"
     },
     {
       src: "/lovable-uploads/236168c4-4b17-4bc4-aef8-189909e9a01b.png",
-      title: "Mountain Golf Course", 
+      title: "Tournaments", 
       alt: "Golf course with mountain backdrop and players"
+    },
+    {
+      src: "/lovable-uploads/8d91ef05-4509-4733-82d2-efdf4f334b64.png",
+      title: "Courses",
+      alt: "Beautiful sunset over golf course with water reflection"
     }
   ];
 
@@ -128,9 +128,9 @@ const Index = () => {
           </div>
 
           {/* Gallery Section */}
-          <div className="w-full">
+          <div className="w-full flex">
             {galleryImages.map((image, index) => (
-              <div key={index} className="relative">
+              <div key={index} className="relative flex-1">
                 <div className="relative overflow-hidden group cursor-pointer">
                   <img 
                     src={image.src}
@@ -144,7 +144,7 @@ const Index = () => {
                   </div>
                 </div>
                 {index < galleryImages.length - 1 && (
-                  <div className="h-px bg-gradient-to-r from-transparent via-cream to-transparent"></div>
+                  <div className="absolute top-0 right-0 w-px h-full bg-transparent border-r border-background/30"></div>
                 )}
               </div>
             ))}
