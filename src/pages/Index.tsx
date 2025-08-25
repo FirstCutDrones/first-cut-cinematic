@@ -1,4 +1,3 @@
-import Navigation from "@/components/Navigation";
 import MobileCTA from "@/components/MobileCTA";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -31,24 +30,21 @@ const Index = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const services = [
+  const galleryImages = [
     {
-      icon: <Camera className="h-8 w-8 text-golden" />,
-      title: "Trip Highlights",
-      description: "Capture the memorable moments of your golf getaway with cinematic aerial footage, full audio cart cams, and action sequences.",
-      link: "/services"
+      src: "/lovable-uploads/8d91ef05-4509-4733-82d2-efdf4f334b64.png",
+      title: "Sunset Golf Course",
+      alt: "Beautiful sunset over golf course with water reflection"
     },
     {
-      icon: <Play className="h-8 w-8 text-golden" />,
-      title: "Signature Flyovers", 
-      description: "Showcase your course's most iconic holes with professional drone videography and stunning aerial perspectives.",
-      link: "/services"
+      src: "/lovable-uploads/1248dd04-4651-4e22-9cf0-d05c9d2166e7.png", 
+      title: "Golf Group Photo",
+      alt: "Group of golfers on desert golf course"
     },
     {
-      icon: <Users className="h-8 w-8 text-golden" />,
-      title: "Full Course Packages",
-      description: "Complete documentation of all 18 holes with detailed flyovers, perfect for course marketing and promotion.",
-      link: "/services"
+      src: "/lovable-uploads/236168c4-4b17-4bc4-aef8-189909e9a01b.png",
+      title: "Mountain Golf Course", 
+      alt: "Golf course with mountain backdrop and players"
     }
   ];
 
@@ -93,8 +89,6 @@ const Index = () => {
         />
       </div>
 
-      {/* Navigation */}
-      <Navigation />
       
       {/* Fixed Slogan that scales with scroll */}
       <div 
@@ -133,31 +127,27 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Services - Less boxey design */}
-          <div className="py-16 px-4">
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold mb-6">Our Services</h2>
-                <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
-                  Professional drone videography services tailored for golf courses, events, and memorable golf experiences.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-6">
-                {services.map((service, index) => (
-                  <div key={index} className="bg-gradient-primary rounded-lg p-8 text-center transition-transform hover:scale-105">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-golden/20 rounded-full mb-6">
-                      <div className="text-golden">{service.icon}</div>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 text-foreground">{service.title}</h3>
-                    <p className="text-foreground/90 mb-6">{service.description}</p>
-                    <Button asChild variant="outline" className="border-golden text-golden hover:bg-golden hover:text-card">
-                      <Link to={service.link}>Learn More</Link>
-                    </Button>
+          {/* Gallery Section */}
+          <div className="w-full">
+            {galleryImages.map((image, index) => (
+              <div key={index} className="relative">
+                <div className="relative overflow-hidden group cursor-pointer">
+                  <img 
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-[60vh] object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-50"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <h3 className="text-4xl font-light text-white text-center z-10">
+                      {image.title}
+                    </h3>
                   </div>
-                ))}
+                </div>
+                {index < galleryImages.length - 1 && (
+                  <div className="h-px bg-gradient-to-r from-transparent via-cream to-transparent"></div>
+                )}
               </div>
-            </div>
+            ))}
           </div>
 
           {/* Testimonials - Simplified */}

@@ -30,6 +30,7 @@
     /* Golden Rye Premium Accent */
     --golden: 44 62% 61%;               /* Golden Rye #D9B85C */
     --golden-foreground: 0 0% 48%;      /* Graphite text on gold */
+    --cream: 45 25% 92%;                /* Creamy separator color */
     
     /* System Colors */
     --primary: 156 38% 18%;             /* Forest Green */
