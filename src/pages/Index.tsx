@@ -111,7 +111,7 @@ const Index = () => {
         <div className="text-center px-4 max-w-4xl mx-auto">
           {/* Logo */}
           <div 
-            className="mb-4 flex justify-center"
+            className="mb-2 flex justify-center"
             style={{
               transform: `scale(${logoScale})`,
               transition: 'transform 0.1s ease-out'
@@ -120,7 +120,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/235a98b2-5c7a-4b4e-b0d3-376b892bfa2c.png" 
               alt="First Cut Drones Logo" 
-              className="w-[40rem] h-[40rem] md:w-[60rem] md:h-[60rem] object-contain"
+              className="w-[32rem] h-[32rem] md:w-[48rem] md:h-[48rem] object-contain"
             />
           </div>
           
