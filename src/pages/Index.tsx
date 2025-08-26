@@ -30,13 +30,13 @@ const Index = () => {
         const textScale = Math.min(1.5, 1 + progress * 0.8);
         setTextScale(textScale);
         
-        // Text moves upward as it scales
-        const textTranslateY = -progress * 200; // Move up to 200px
+        // Text moves upward as it scales, with mobile limit
+        const textTranslateY = -progress * (window.innerWidth < 768 ? 100 : 200); // Reduced movement on mobile
         setTextTranslateY(textTranslateY);
       } else {
         setLogoScale(0.1);
         setTextScale(1.5);
-        setTextTranslateY(-200);
+        setTextTranslateY(window.innerWidth < 768 ? -100 : -200);
       }
     };
 
@@ -106,36 +106,39 @@ const Index = () => {
       
       {/* Fixed Logo and Slogan that scale differently with scroll */}
       <div 
-        className="fixed inset-0 z-10 flex items-start justify-center pt-16 pointer-events-none"
+        className="fixed inset-0 z-10 flex items-start justify-center pt-8 sm:pt-16 pointer-events-none overflow-hidden"
         style={{
           opacity: logoScale > 0.05 || textScale > 0.1 ? 1 : 0,
           transition: 'opacity 0.3s ease-out'
         }}
       >
-        <div className="text-center px-4 max-w-4xl mx-auto">
+        <div className="text-center px-4 max-w-4xl mx-auto w-full">
           {/* Logo */}
           <div 
-            className="-mb-4 flex justify-center"
+            className="-mb-2 sm:-mb-4 flex justify-center"
             style={{
               transform: `scale(${logoScale})`,
-              transition: 'transform 0.1s ease-out'
+              transition: 'transform 0.1s ease-out',
+              transformOrigin: 'center top'
             }}
           >
             <img 
               src="/lovable-uploads/61767fed-6d4f-4ea9-a60d-60d020ea5a1f.png" 
               alt="First Cut Drones Logo" 
-              className="w-[25.6rem] h-[25.6rem] md:w-[38.4rem] md:h-[38.4rem] object-contain"
+              className="w-[20rem] h-[20rem] sm:w-[25.6rem] sm:h-[25.6rem] md:w-[38.4rem] md:h-[38.4rem] object-contain"
             />
           </div>
           
           {/* Text */}
           <div
+            className="max-w-full"
             style={{
-              transform: `scale(${textScale}) translateY(${textTranslateY}px)`,
-              transition: 'transform 0.1s ease-out'
+              transform: `scale(${Math.min(textScale, window.innerWidth < 768 ? 1.2 : 1.5)}) translateY(${textTranslateY}px)`,
+              transition: 'transform 0.1s ease-out',
+              transformOrigin: 'center top'
             }}
           >
-            <h1 className="text-4xl md:text-7xl font-bold mb-6 text-white">
+            <h1 className="text-2xl sm:text-4xl md:text-7xl font-bold mb-6 text-white leading-tight">
               Your Golf Game,<br />
               <span className="text-golden">
                 From a New Perspective
