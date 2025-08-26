@@ -10,6 +10,7 @@ const Index = () => {
   const [scrollY, setScrollY] = useState(0);
   const [logoScale, setLogoScale] = useState(1);
   const [textScale, setTextScale] = useState(1);
+  const [textTranslateY, setTextTranslateY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,9 +29,14 @@ const Index = () => {
         // Text only zooms in and stays at that scale
         const textScale = Math.min(1.5, 1 + progress * 0.8);
         setTextScale(textScale);
+        
+        // Text moves upward as it scales
+        const textTranslateY = -progress * 200; // Move up to 200px
+        setTextTranslateY(textTranslateY);
       } else {
         setLogoScale(0.1);
         setTextScale(1.5);
+        setTextTranslateY(-200);
       }
     };
 
@@ -125,7 +131,7 @@ const Index = () => {
           {/* Text */}
           <div
             style={{
-              transform: `scale(${textScale})`,
+              transform: `scale(${textScale}) translateY(${textTranslateY}px)`,
               transition: 'transform 0.1s ease-out'
             }}
           >
