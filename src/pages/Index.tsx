@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Play, Camera, Users } from "lucide-react";
 import { useEffect, useState } from "react";
+import firstCutLogo from "@/assets/first-cut-logo-white.png";
 // Using public path instead of import to avoid bundling issues
 
 const Index = () => {
@@ -123,7 +124,7 @@ const Index = () => {
             }}
           >
             <img 
-              src="/lovable-uploads/61767fed-6d4f-4ea9-a60d-60d020ea5a1f.png" 
+              src={firstCutLogo} 
               alt="First Cut Drones Logo" 
               className="w-[20rem] h-[20rem] sm:w-[25.6rem] sm:h-[25.6rem] md:w-[38.4rem] md:h-[38.4rem] object-contain"
             />
