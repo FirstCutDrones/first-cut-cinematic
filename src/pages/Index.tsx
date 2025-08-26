@@ -162,23 +162,24 @@ const Index = () => {
           </div>
 
           {/* Gallery Section */}
-          <div className="w-full flex">
+          <div className="w-full flex flex-col md:flex-row">
             {galleryImages.map((image, index) => (
               <div key={index} className="relative flex-1">
                 <div className="relative overflow-hidden group cursor-pointer">
                   <img 
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-[60vh] object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-50"
+                    className="w-full h-[50vh] md:h-[60vh] object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-50"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="text-4xl font-light text-white text-center z-10">
+                    <h3 className="text-3xl md:text-4xl font-light text-white text-center z-10">
                       {image.title}
                     </h3>
                   </div>
                 </div>
+                {/* Separator - only show on desktop and not for last item */}
                 {index < galleryImages.length - 1 && (
-                  <div className="absolute top-0 right-0 w-px h-full bg-transparent border-r border-background/30"></div>
+                  <div className="hidden md:block absolute top-0 right-0 w-px h-full bg-transparent border-r border-background/30"></div>
                 )}
               </div>
             ))}
