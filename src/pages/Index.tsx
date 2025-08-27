@@ -123,7 +123,7 @@ const Index = () => {
             }}
           >
             <img 
-              src="/lovable-uploads/61767fed-6d4f-4ea9-a60d-60d020ea5a1f.png" 
+              src="/lovable-uploads/b81b82a2-dbad-4b88-b8c8-858730d1a2de.png" 
               alt="First Cut Drones Logo" 
               className="w-[20rem] h-[20rem] sm:w-[25.6rem] sm:h-[25.6rem] md:w-[38.4rem] md:h-[38.4rem] object-contain"
             />
