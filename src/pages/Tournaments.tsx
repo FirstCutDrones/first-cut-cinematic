@@ -56,7 +56,7 @@ const Tournaments = () => {
       {/* Logo in top left */}
       <Link to="/" className="fixed top-6 left-6 z-50">
         <img 
-          src="/lovable-uploads/b81b82a2-dbad-4b88-b8c8-858730d1a2de.png" 
+          src="/lovable-uploads/7d271c3f-61a5-41fc-a837-1441aa4f9d86.png" 
           alt="First Cut Drones" 
           className="h-20 w-auto"
         />
