@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import { Link } from "react-router-dom";
 import MobileCTA from "@/components/MobileCTA";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -43,7 +43,7 @@ const Quote = () => {
           preferred_date: formData.date,
           location: formData.location,
           project_details: formData.notes,
-          to_email: "hello@firstcutdrones.com", // Your email
+          to_email: "FirstCutDrones@gmail.com", // Your email
         },
         EMAILJS_PUBLIC_KEY
       );
@@ -77,7 +77,18 @@ const Quote = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      {/* Simple header with just logo */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div className="container mx-auto px-4 h-16 flex items-center">
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/b81b82a2-dbad-4b88-b8c8-858730d1a2de.png" 
+              alt="First Cut Drones" 
+              className="h-8 w-auto"
+            />
+          </Link>
+        </div>
+      </header>
       
       <main className="pt-16">
         {/* Hero Section */}
@@ -95,7 +106,7 @@ const Quote = () => {
           
           <div className="relative z-10 max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              Get Your Quote
+              Let's Discuss Your Project
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
               Ready to capture your golf experience from above? Let's discuss your project and create something cinematic together.
@@ -140,10 +151,10 @@ const Quote = () => {
                         <SelectValue placeholder="Select a service" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="signature-hole">Signature Hole Flyover - $250</SelectItem>
-                        <SelectItem value="full-course">Full Course Package - $3,000</SelectItem>
-                        <SelectItem value="guys-trip">Guy Trip Highlights - $850</SelectItem>
-                        <SelectItem value="raw-footage">Raw Drone Footage - $500</SelectItem>
+                        <SelectItem value="signature-hole">Signature Hole Flyover</SelectItem>
+                        <SelectItem value="full-course">Full Course Package</SelectItem>
+                        <SelectItem value="guys-trip">Guy Trip Highlights</SelectItem>
+                        <SelectItem value="raw-footage">Raw Drone Footage</SelectItem>
                         <SelectItem value="custom">Custom Request</SelectItem>
                       </SelectContent>
                     </Select>
@@ -186,7 +197,7 @@ const Quote = () => {
                   </div>
 
                   <Button type="submit" className="btn-golden w-full text-lg py-3" disabled={isLoading}>
-                    {isLoading ? "Sending..." : "Submit Quote Request"}
+                    {isLoading ? "Sending..." : "Let's Discuss Your Project"}
                   </Button>
 
                   <p className="text-sm text-foreground-secondary text-center">
@@ -198,13 +209,10 @@ const Quote = () => {
 
             {/* Contact Info */}
             <div className="mt-12 text-center">
-              <h3 className="text-xl font-semibold mb-4">Prefer to Call or Email?</h3>
+              <h3 className="text-xl font-semibold mb-4">Prefer to Email?</h3>
               <div className="space-y-2">
                 <p className="text-foreground-secondary">
-                  Email: <span className="text-accent">hello@firstcutdrones.com</span>
-                </p>
-                <p className="text-foreground-secondary">
-                  Phone: <span className="text-accent">(555) 123-GOLF</span>
+                  Email: <span className="text-accent">FirstCutDrones@gmail.com</span>
                 </p>
               </div>
             </div>
