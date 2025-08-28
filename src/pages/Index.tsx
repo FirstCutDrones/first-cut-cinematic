@@ -163,26 +163,29 @@ const Index = () => {
 
           {/* Gallery Section */}
           <div className="w-full flex flex-col md:flex-row">
-            {galleryImages.map((image, index) => (
-              <div key={index} className="relative flex-1">
-                <div className="relative overflow-hidden group cursor-pointer">
-                  <img 
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-[50vh] md:h-[60vh] object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-50"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="text-3xl md:text-4xl font-light text-white text-center z-10">
-                      {image.title}
-                    </h3>
+            {galleryImages.map((image, index) => {
+              const links = ["/trips", "/tournaments", "/courses"];
+              return (
+                <Link key={index} to={links[index]} className="relative flex-1">
+                  <div className="relative overflow-hidden group cursor-pointer">
+                    <img 
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-[50vh] md:h-[60vh] object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-50"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <h3 className="text-3xl md:text-4xl font-light text-white text-center z-10">
+                        {image.title}
+                      </h3>
+                    </div>
                   </div>
-                </div>
-                {/* Separator - only show on desktop and not for last item */}
-                {index < galleryImages.length - 1 && (
-                  <div className="hidden md:block absolute top-0 right-0 w-px h-full bg-transparent border-r border-background/30"></div>
-                )}
-              </div>
-            ))}
+                  {/* Separator - only show on desktop and not for last item */}
+                  {index < galleryImages.length - 1 && (
+                    <div className="hidden md:block absolute top-0 right-0 w-px h-full bg-transparent border-r border-background/30"></div>
+                  )}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Testimonials - Simplified */}
@@ -219,12 +222,9 @@ const Index = () => {
                 Let's create something cinematic together. From signature hole flyovers to complete course documentation, 
                 we bring your golf story to life from above.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Button asChild className="btn-golden text-lg px-8 py-3">
                   <Link to="/quote">Start Your Project</Link>
-                </Button>
-                <Button asChild variant="outline" className="text-lg px-8 py-3 border-foreground text-foreground hover:bg-foreground hover:text-background">
-                  <Link to="/gallery">View Our Work</Link>
                 </Button>
               </div>
             </div>
