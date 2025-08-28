@@ -82,7 +82,7 @@ const Quote = () => {
         <img 
           src="/lovable-uploads/b81b82a2-dbad-4b88-b8c8-858730d1a2de.png" 
           alt="First Cut Drones" 
-          className="h-12 w-auto"
+          className="h-20 w-auto"
         />
       </Link>
       
