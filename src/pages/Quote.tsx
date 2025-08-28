@@ -77,20 +77,16 @@ const Quote = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Simple header with just logo */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-4 h-16 flex items-center">
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/b81b82a2-dbad-4b88-b8c8-858730d1a2de.png" 
-              alt="First Cut Drones" 
-              className="h-8 w-auto"
-            />
-          </Link>
-        </div>
-      </header>
+      {/* Logo in top left corner */}
+      <Link to="/" className="fixed top-6 left-6 z-50 flex items-center">
+        <img 
+          src="/lovable-uploads/b81b82a2-dbad-4b88-b8c8-858730d1a2de.png" 
+          alt="First Cut Drones" 
+          className="h-12 w-auto"
+        />
+      </Link>
       
-      <main className="pt-16">
+      <main>
         {/* Hero Section */}
         <section className="relative py-24 px-4 overflow-hidden">
           <div 
