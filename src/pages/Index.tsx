@@ -85,7 +85,7 @@ const Index = () => {
       {/* Fixed Video Background */}
       <div className="fixed inset-0 z-0">
         <iframe
-          src="https://player.vimeo.com/video/1121747842?background=1&autoplay=1&loop=1&byline=0&title=0&portrait=0&muted=1&controls=0"
+          src="https://player.vimeo.com/video/1121750551?background=1&autoplay=1&loop=1&byline=0&title=0&portrait=0&muted=1&controls=0"
           className="w-full h-full"
           style={{
             position: 'absolute',
